@@ -17,13 +17,13 @@ library(tidyverse)
 CNA08_BsAs <- read_excel("C:/Users/Dell/Documents/Mathi/cuadros_CNA2008 (1)/CNA08/cna08_buenosaires.xls", sheet = 7, skip = 3 )
 CNA08_BsAs <- na.omit(CNA08_BsAs)
 
-CNA08_BsAs %>% 
+CNA08_BsAs_HyF <- CNA08_BsAs %>% 
    select("...1", "Hortalizas", "Frutales") %>% 
    filter(...1 == "Total (1)") %>% 
    rename("GRUPO.HORTALIZAS.ha." = "Hortalizas", "GRUPO.FRUTALES.ha." = "Frutales" ) %>% 
    mutate( ...1 = case_when( ...1 == "Total (1)" ~ "Total",
-                                +                             TRUE ~ ...1 ),
-              +           Provincia = "Buenos Aires"  )
+                            TRUE ~ ...1 ),
+          Provincia = "Buenos Aires"  )
 
 
 # Data Catamarca:
@@ -77,8 +77,8 @@ CNA08_Corrientes_HyF <- CNA08_Corrientes %>%
    filter(...1 == "Total (1)")%>% 
    rename("GRUPO.HORTALIZAS.ha." = "Hortalizas", "GRUPO.FRUTALES.ha." = "Frutales" ) %>% 
    mutate( ...1 = case_when( ...1 == "Total (1)" ~ "Total",
-                                +                             TRUE ~ ...1 ),
-              +           Provincia = "Corrientes" )
+                            TRUE ~ ...1 ),
+           Provincia = "Corrientes" )
 
 # Data Entre Rios:
 CNA08_Entre_Rios <- read_excel("C:/Users/Dell/Documents/Mathi/cuadros_CNA2008 (1)/CNA08/cna08_entrerios.xls", sheet = 7, skip = 3 )
@@ -293,8 +293,8 @@ CNA08_FyV <- bind_rows(
    CNA08_Tucuman_HyF
  )
 
-CNA08_FyV %>% 
-  select(Año_Edicion, Provincia, GRUPO.HORTALIZAS.ha., GRUPO.FRUTALES.ha.) %>% 
+CNA08_FyV <- CNA08_FyV %>% 
+  select(Provincia, GRUPO.HORTALIZAS.ha., GRUPO.FRUTALES.ha.) %>% 
    mutate(Año_Edicion = 2009)
 
 

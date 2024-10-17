@@ -3,7 +3,7 @@
     "path": "~/Mathi/CNA08_FyV/CNA08.R",
     "project_path": "CNA08.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "192613537",
     "contents": "",
     "dirty": false,
     "created": 1729185803582.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "301,61",
+        "cursorPosition": "298,0",
         "scrollLine": "280"
     },
     "folds": "",
-    "lastKnownWriteTime": 1729185286,
+    "lastKnownWriteTime": 1729186478,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1729185286,
+    "last_content_update": 1729186478371,
     "read_only": false,
     "read_only_alternatives": []
 }
